@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class ObstacleSpawning : MonoBehaviour
 {
-    public GameObject logPrefab;
+    public GameObject prefab, prefab2;
     
     public float spwanRate;
 
     void Start() {
-        InvokeRepeating("SpawnLog", spwanRate, spwanRate);
+        InvokeRepeating("SpawnObstacle", spwanRate, spwanRate);
     }
-    public void SpawnLog() {
-        Instantiate(logPrefab);
+    public void SpawnObstacle() {
+        Instantiate(prefab);
+        Instantiate(prefab2);
     }
 }

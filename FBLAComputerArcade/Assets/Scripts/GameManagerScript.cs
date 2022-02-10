@@ -5,9 +5,15 @@ public class GameManagerScript : MonoBehaviour
 {
     bool gameHasEnded = false;
 
+    public void LoadScene(int sceneNumber) {
+        SceneManager.LoadScene(sceneNumber);
+    }
+    public void NextLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void EndGame() {
         if(gameHasEnded == false) {
-            Debug.Log(";lfajsdfk");
             gameHasEnded = true;
             Invoke("Restart", 1f);
             
