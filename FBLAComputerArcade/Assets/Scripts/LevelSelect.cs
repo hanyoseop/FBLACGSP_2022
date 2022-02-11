@@ -7,6 +7,8 @@ public class LevelSelect : MonoBehaviour
             Application.Quit();
         }
     }
+    
+    // Load the chosen level
     public void PlayLevel(int level) {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + level);
     }

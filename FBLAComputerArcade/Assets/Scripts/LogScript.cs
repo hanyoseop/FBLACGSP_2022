@@ -13,10 +13,12 @@ public class LogScript : MonoBehaviour
         direction = initalDirection;
     }
 
+    // Moving Script
     void FixedUpdate() {
         log.velocity = new Vector2(direction * Time.deltaTime * speed, log.velocity.y);
     }
 
+    // Logs Logic
     void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.name == "StartingGround" || collision.gameObject.tag == "Obstacle" || collision.gameObject.name == "Player") {
             FindObjectOfType<AudioManager>().Play("LogBreaking");
@@ -27,6 +29,7 @@ public class LogScript : MonoBehaviour
         }
     }
 
+    // Change logs direction 
     private void ChangeDirection() {
         if(counter == 0) {
             direction = initalDirection;

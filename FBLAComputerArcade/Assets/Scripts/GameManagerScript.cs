@@ -5,8 +5,19 @@ public class GameManagerScript : MonoBehaviour
 {
     bool gameHasEnded = false;
 
-    public void LoadScene(int sceneNumber) {
-        SceneManager.LoadScene(sceneNumber);
+
+
+    void Update() {
+        if(Input.GetKey(KeyCode.Tab)) {
+            LoadMainmenu();
+        }
+        if(Input.GetKey(KeyCode.Escape)) {
+            Quit();
+        }
+    }
+
+    public void LoadMainmenu() {
+        SceneManager.LoadScene(0);
     }
     public void NextLevel() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -22,5 +33,9 @@ public class GameManagerScript : MonoBehaviour
 
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Quit() {
+        Application.Quit();
     }
 }

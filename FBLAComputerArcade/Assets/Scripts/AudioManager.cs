@@ -1,12 +1,12 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
-    // Start is called before the first frame update
     void Awake()
     {
         foreach(Sound s in sounds) {
@@ -15,6 +15,16 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+        }
+    }
+
+    // Play the background music based on the scene number
+    void Start() {
+        if(SceneManager.GetActiveScene().buildIndex == 0) {
+            Play("JourneyBGM");
+        } else {
+            Play("Theme");
         }
     }
 

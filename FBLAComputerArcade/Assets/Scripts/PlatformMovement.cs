@@ -15,11 +15,13 @@ public class PlatformMovement : MonoBehaviour
         }
     }
 
+    // Continuously move based on the speed
     void FixedUpdate()
     {
         transform.Translate(new Vector2(1f, 0) * speed * Time.deltaTime * direction);
     }
 
+    // Change direction when hit the wall
     void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.tag == "Wall") {
             changeDirection();

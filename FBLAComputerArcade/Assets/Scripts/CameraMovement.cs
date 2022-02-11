@@ -12,6 +12,7 @@ public class CameraMovement : MonoBehaviour
     private float lookAhead;
 
     private void Update() {
+        // Smoothly translate in y-axis along with the player
         transform.position = new Vector3(transform.position.x, player.position.y + lookAhead, transform.position.z);
         lookAhead = Mathf.Lerp(lookAhead, (aheadDistance * player.localScale.y), Time.deltaTime * cameraSpeed);
     }

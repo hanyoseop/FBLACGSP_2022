@@ -32,9 +32,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && grounded) {
             Jump();
         }
-        if(Input.GetKey(KeyCode.Escape)) {
-            Application.Quit();
-        }
     }
 
     public void Jump() {
@@ -49,11 +46,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void Die() {
-        if(lives == 0) {
+        if(lives == 1) {
             GOUI.SetActive(true);
             player.constraints = RigidbodyConstraints2D.FreezeAll;
             FindObjectOfType<GameManagerScript>().EndGame(); 
         }
         lives -= 1;
+    }
+
+    public void GameOver() {
+        lives = 1;
+        Die();
     }
 }
