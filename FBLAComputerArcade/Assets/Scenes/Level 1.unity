@@ -971,7 +971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 2507807133301344662, guid: aedd615170d38c14a91831515220b76e, type: 3}
   prefab2: {fileID: 946045385513984540, guid: fd24d08ac2d400e4783db98533f24fc5, type: 3}
-  spawnRate: 0
+  spawnRate: 4
 --- !u!1001 &370050926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2021,19 +2021,19 @@ MonoBehaviour:
   sounds:
   - name: Jumping
     clip: {fileID: 8300000, guid: 10195857a2bf8ee41a7f80e01fb30af4, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: LogBreaking
     clip: {fileID: 8300000, guid: e2daf1562bf3bff49a1900927a669a3f, type: 3}
-    volume: 0.1
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: d4effe5cd9f119647aac0d6ce1ae8035, type: 3}
-    volume: 0.3
+    volume: 0.07
     pitch: 1
     loop: 1
     source: {fileID: 0}

@@ -20,7 +20,10 @@ public class LogScript : MonoBehaviour
 
     // Logs Logic
     void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.name == "StartingGround" || collision.gameObject.tag == "Obstacle" || collision.gameObject.name == "Player") {
+        if(collision.gameObject.name == "StartingGround") {
+            Destroy(gameObject);
+        }
+        if(collision.gameObject.tag == "Obstacle" || collision.gameObject.name == "Player") {
             FindObjectOfType<AudioManager>().Play("LogBreaking");
             Destroy(gameObject);
         }
