@@ -4,7 +4,8 @@
 
 This repository contains codes and resources for FBLA computer game & simulation programming.
 The repository contains the actual executable of the project, which is located in the "Build" folder.
-Run "Saving Leia.exe" to play the game.
+Scripts and codes for the project can be found under "FBLAComputer Arcade/Assets/Scripts"
+Run "Saving Leia.exe" under "Build" to play the game.
 
 Controls:
 Use the combination of A and D or Left Arrow key and Right Arrow key for general movement.
